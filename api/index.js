@@ -19,4 +19,11 @@ app.use("/api/v1/company",companyRoute);
 app.use("/api/v1/category",categoryRoute);
 app.use("/api/v1/user",userRoute);
  */
+
+const productRoute = require("./src/routes/route.product");
+
+app.use("/api/v1/product",productRoute);
+
+
+
 module.exports = app;

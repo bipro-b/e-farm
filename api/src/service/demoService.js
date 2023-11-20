@@ -13,7 +13,17 @@ exports.createCompanyService = async (data) => {
 
   return company;
 };
+/* 
+exports.createCategoryService = async (data) => {
+  const result = await Category.create(data);
+  return result;
+};
 
+exports.getCategoryService = async () => {
+  const result = await Category.find({}).populate('companies');
+  return result;
+};
+*/
 exports.getCompanyService = async () => {
   const company = await Company.find({});
   return company;

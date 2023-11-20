@@ -25,7 +25,7 @@ const productSchema =  mongoose.Schema({
         required:true,
     },
     location:String,
-    category:{
+    /* category:{
         name:{
             type:String,
             required:true
@@ -35,7 +35,7 @@ const productSchema =  mongoose.Schema({
             ref:"Category",
             required:true
         }
-    }
+    } */
 
 },{timeStamps:true})
 
