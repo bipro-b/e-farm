@@ -13,6 +13,11 @@ const companySchema = mongoose.Schema({
         type:String,
         required: true,
     },
+    unit:{
+        type: String,
+        enum:['kg','piece'],
+        required:true
+     },
     imageURLs:[
        {
         type:String,
