@@ -3,7 +3,7 @@ const app = express();
 const cors = require("cors");
 
 
-// 
+ 
 app.use(express.json());
 app.use(cors());
 
@@ -21,9 +21,10 @@ app.use("/api/v1/user",userRoute);
  */
 
 const productRoute = require("./src/routes/route.product");
+const categoryRoute = require("./src/routes/route.category");
 
 app.use("/api/v1/product",productRoute);
-
+app.use("/api/v1/category",categoryRoute);
 
 
 module.exports = app;
