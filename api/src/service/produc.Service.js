@@ -14,3 +14,18 @@ exports.serviceGetProductById= async(id)=>{
     const product = await Product.findOne({_id:id})
     return product;
 }
+
+
+exports.serviceUpdateProductById = async(id,data)=>{
+    const updatedProduct = await Product.updateOne(
+        {_id:id},
+        {
+            $set:data
+        },
+        {
+            runValidators:true,
+        }
+    )
+    return updatedProduct;
+}
+
