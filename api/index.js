@@ -22,9 +22,11 @@ app.use("/api/v1/user",userRoute);
 
 const productRoute = require("./src/routes/route.product");
 const categoryRoute = require("./src/routes/route.category");
+const authRoute = require("./src/routes/auth.route")
 
 app.use("/api/v1/product",productRoute);
 app.use("/api/v1/category",categoryRoute);
+app.use("/api/v1/auth",authRoute);
 
 
 module.exports = app;
