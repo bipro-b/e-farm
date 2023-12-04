@@ -7,20 +7,12 @@ const userSchema = mongoose.Schema({
         required: true,
     },
     phone: {
-        type: Number,
-        validate: {
-            validator: function (value) {
-                // Regular expression for a Bangladesh phone number (assumed 11 digits)
-                const phoneRegex = /^01[3-9]\d{8}$/;
-                return phoneRegex.test(value.toString());
-            },
-            message: props => `${props.value} is not a valid Bangladesh phone number!`
-        },
+        type: String,
         required: true,
         unique: true,
     },
     password: {
-        type: String, // Corrected the missing "type" declaration
+        type: String, 
         required: true,
     },
     avatar: {
@@ -31,4 +23,4 @@ const userSchema = mongoose.Schema({
 
 const User = mongoose.model('User', userSchema);
 
-module.exports = User; // Corrected the module.exports statement
+module.exports = User; 
